@@ -12,38 +12,40 @@ export default function Header() {
 
   return (
     <header className="bg-primary text-white shadow-sm">
-      <nav className="container mx-auto px-6 py-3 flex justify-between items-center">
-        <div className="text-2xl font-bold">To Be Home</div>
-        <div className="hidden md:flex items-center justify-between flex-grow ml-6">
-          <div className="flex items-center justify-center">
-            <Link href="#" className="text-white hover:text-gray-300 mx-4">
-              Início
-            </Link>
-            <Link href="#" className="text-white hover:text-gray-300 mx-4">
-              Catálogos
-            </Link>
-            <Link href="#" className="text-white hover:text-gray-300 mx-4">
-              Serviços
-            </Link>
-            <Link href="#" className="text-white hover:text-gray-300 mx-4">
-              Contato
-            </Link>
+      <nav className="container mx-auto px-6 py-3 flex justify-center items-center">
+        <div className="flex justify-between items-center w-full max-w-6xl">
+          <div className="text-2xl font-bold">To Be Home</div>
+          <div className="hidden md:flex items-center justify-between flex-grow ml-6">
+            <div className="flex items-center justify-center">
+              <Link href="#" className="text-white hover:text-gray-300 mx-4">
+                Início
+              </Link>
+              <Link href="#" className="text-white hover:text-gray-300 mx-4">
+                Catálogos
+              </Link>
+              <Link href="#" className="text-white hover:text-gray-300 mx-4">
+                Serviços
+              </Link>
+              <Link href="#" className="text-white hover:text-gray-300 mx-4">
+                Contato
+              </Link>
+            </div>
+            <div className="flex items-center space-x-4">
+              <Button
+                variant="outline"
+                className="text-black border-black hover:bg-black hover:text-white"
+              >
+                Login
+              </Button>
+              <Button variant="secondary" className="text-black">
+                Reservar Agora
+              </Button>
+            </div>
           </div>
-          <div className="flex items-center space-x-4">
-            <Button
-              variant="outline"
-              className="text-black border-black hover:bg-black hover:text-white"
-            >
-              Login
-            </Button>
-            <Button variant="secondary" className="text-black">
-              Reservar Agora
-            </Button>
-          </div>
+          <button className="md:hidden text-white" onClick={toggleMenu}>
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
-        <button className="md:hidden text-white" onClick={toggleMenu}>
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
       </nav>
       {isMenuOpen && (
         <div className="md:hidden mt-4">
