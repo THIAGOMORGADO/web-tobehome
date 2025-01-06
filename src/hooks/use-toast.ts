@@ -1,11 +1,9 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 // Inspired by react-hot-toast library
 import * as React from "react";
+
 import type { ToastActionElement, ToastProps } from "@/components/ui/toast";
-import type { ActionType } from "./path/to/module"; // Ensure this is the correct import
 
 const TOAST_LIMIT = 1;
 const TOAST_REMOVE_DELAY = 1000000;
@@ -17,13 +15,12 @@ type ToasterToast = ToastProps & {
   action?: ToastActionElement;
 };
 
-// Define action types if needed
-const actionTypes: any = {
+const actionTypes = {
   ADD_TOAST: "ADD_TOAST",
   UPDATE_TOAST: "UPDATE_TOAST",
   DISMISS_TOAST: "DISMISS_TOAST",
   REMOVE_TOAST: "REMOVE_TOAST",
-};
+} as const;
 
 let count = 0;
 

@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import { Facebook, Instagram, Twitter } from 'lucide-react'
+import Link from "next/link";
+import { Facebook, Instagram, Twitter } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -13,10 +13,26 @@ export default function Footer() {
           <div className="w-full md:w-1/4 mb-6 md:mb-0">
             <h3 className="text-lg font-semibold mb-2">Links Rápidos</h3>
             <ul className="text-gray-400">
-              <li><Link href="#" className="hover:text-white">Sobre Nós</Link></li>
-              <li><Link href="#" className="hover:text-white">Quartos</Link></li>
-              <li><Link href="#" className="hover:text-white">Serviços</Link></li>
-              <li><Link href="#" className="hover:text-white">Contato</Link></li>
+              <li>
+                <Link href="#" className="hover:text-white">
+                  Sobre Nós
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="hover:text-white">
+                  Quartos
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="hover:text-white">
+                  Serviços
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="hover:text-white">
+                  Contato
+                </Link>
+              </li>
             </ul>
           </div>
           <div className="w-full md:w-1/4 mb-6 md:mb-0">
@@ -46,6 +62,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
-

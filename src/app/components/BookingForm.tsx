@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import Select from "@/components/ui/select";
+import { Select } from "@/components/ui/select";
 
 export default function BookingForm() {
   return (
@@ -24,7 +24,7 @@ export default function BookingForm() {
             </div>
             <div>
               <Label htmlFor="guests">Número de Hóspedes</Label>
-              <Select aria-labelledby="guests">
+              <Select id="guests">
                 <option value="1">1 Hóspede</option>
                 <option value="2">2 Hóspedes</option>
                 <option value="3">3 Hóspedes</option>
